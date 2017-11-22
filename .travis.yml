@@ -1,3 +1,6 @@
 language: cpp
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install libboost-python-dev
 script:
   - ./.travis-build.sh
