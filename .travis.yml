@@ -1,0 +1,13 @@
+language: cpp
+script:
+  - export OPENEXR_HOME=$PWD/dist
+  - export OPENEXR_BUILD=$PWD/build
+  - mkdir -p $build/IlmBase
+  - pushd $build/IlmBase
+  - cmake ../../IlmBase \
+      -DNAMESPACE_VERSIONING=OFF \
+      -DCMAKE_INSTALL_PREFIX=$install
+  - make -j8
+  - make test
+  - make install
+  - popd
