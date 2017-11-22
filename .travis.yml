@@ -2,8 +2,8 @@ language: cpp
 script:
   - export OPENEXR_HOME=$PWD/dist
   - export OPENEXR_BUILD=$PWD/build
-  - mkdir -p $build/IlmBase
-  - pushd $build/IlmBase
+  - mkdir -p $OPENEXR_BUILD/IlmBase
+  - pushd $OPENEXR_BUILD/IlmBase
   - cmake ../../IlmBase \
       -DNAMESPACE_VERSIONING=OFF \
       -DCMAKE_INSTALL_PREFIX=$install
