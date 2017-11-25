@@ -6,6 +6,7 @@ addons:
       - boost-latest
     packages:
         - libboost-python1.55-dev
+        - libpython2.7-dev
 
 script:
   - ./.travis-build.sh
